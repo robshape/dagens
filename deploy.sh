@@ -5,13 +5,16 @@ echo "[*] CLEANING ./docs/"
 rm -fr ./docs/
 echo
 
-echo "[*] LINTING CSS & TS"
+echo "[*] LINTING CODE"
 npm run lint
 echo
 
 echo "[*] BULDING PROJECT"
 npm run build
 mv dist/ docs
+echo
+
+echo "[*] CONFIGURING DOMAIN"
 echo "dagens.shapeless.xyz" >> docs/CNAME
 echo
 
