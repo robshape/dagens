@@ -43,9 +43,7 @@ const config: webpack.Configuration = {
   },
 
   plugins: [
-    new CleanWebpackPlugin([
-      './dist/',
-    ]),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       cache: false,
       minify: {
