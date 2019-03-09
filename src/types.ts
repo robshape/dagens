@@ -1,8 +1,5 @@
-export interface FetchRecipes {
-  data: Recipes;
-  isRequesting: boolean;
+export interface Recipe {
+  Name: string;
 }
 
-export type Recipes = {
-  Name: string;
-}[]
+export type Recipes = Recipe[]

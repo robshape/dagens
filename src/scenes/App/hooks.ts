@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
-import { FetchRecipes, Recipes } from '../../types';
+import { FetchRecipes } from './types';
+import { Recipes } from '../../types';
 
 const useFetchRecipes = (): FetchRecipes => {
   const [data, setData] = useState<Recipes>([]);
