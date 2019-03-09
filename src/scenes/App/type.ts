@@ -1,6 +1,6 @@
-import { Recipes } from '../../common/type';
+import { Recipe } from '../../common/type';
 
-export interface FetchRecipes {
-  data: Recipes;
+export interface FetchRecipe {
+  data?: Recipe;
   isRequesting: boolean;
 }
