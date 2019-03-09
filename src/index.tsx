@@ -7,6 +7,7 @@ import App from './scenes';
 const node = document.getElementById('index');
 render(<App />, node);
 
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === 'development'
+&& module.hot) {
   module.hot.accept();
 }
