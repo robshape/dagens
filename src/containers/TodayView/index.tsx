@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 
-import { TodayViewProps } from './types';
+import { TodayViewProps } from './type';
 
 const TodayView = memo((props: TodayViewProps) => {
   const { recipe } = props;

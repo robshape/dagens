@@ -1,7 +1,8 @@
 import React, { Fragment, memo, ReactElement } from 'react';
 
-import { GlobalStyle, StyledApp } from './styles';
+import { GlobalStyle, StyledApp } from './style';
 import Loader from '../../components/Loader';
+import { randomNumber } from '../../common/number';
 import TodayView from '../../containers/TodayView';
 import useFetchRecipes from './hooks';
 
@@ -12,7 +13,8 @@ const App = memo(() => {
   if (isRequesting) {
     child = <Loader />;
   } else if (data.length) {
-    const [recipe] = data;
+    const index = randomNumber(data.length);
+    const recipe = data[index];
     child = <TodayView recipe={recipe} />;
   }
 

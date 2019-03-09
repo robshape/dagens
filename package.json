@@ -47,10 +47,10 @@
   "private": true,
   "scripts": {
     "build": "webpack --config webpack.config.prod.ts --progress",
-    "lint": "npm run lint:css && npm run lint:ts && npm run lint:types",
+    "lint": "npm run lint:css && npm run lint:ts && npm run lint:type",
     "lint:css": "stylelint './src/**/*.ts'",
     "lint:ts": "eslint --ext .js,.ts,.tsx ./",
-    "lint:types": "tsc",
+    "lint:type": "tsc",
     "start": "webpack-dev-server --config webpack.config.dev.ts --progress"
   }
 }

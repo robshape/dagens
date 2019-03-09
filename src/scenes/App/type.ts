@@ -1,4 +1,4 @@
-import { Recipes } from '../../types';
+import { Recipes } from '../../common/type';
 
 export interface FetchRecipes {
   data: Recipes;
