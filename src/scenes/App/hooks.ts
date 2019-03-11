@@ -10,32 +10,29 @@ const RECIPES_TAGS = '&tags[]=6479&tags[]=6480&tags[]=6495&tags[]=6500&tags[]=70
 
 const useFetchRecipe = (): FetchRecipe => {
   const [data, setData] = useState<Recipe>();
-  const [isRequesting, setIsRequesting] = useState(false);
-
-  const request = async (): Promise<void> => {
-    setIsRequesting(true);
-
-    const skip = randomNumberWithIncrement(RECIPES_COUNT, RECIPES_INCREMENT);
-    const response = await fetch(`https://www.arla.se/webappsfacet/api/recipes?skip=${skip}${RECIPES_TAGS}`);
-    const { recipes } = await response.json();
-
-    const index = randomNumber(recipes.length);
-    const recipe = recipes[index];
-    setData(recipe);
-
-    setIsRequesting(false);
-  };
+  const [isFetching, setIsFetching] = useState(false);
 
   useEffect(() => {
-    if (data) return;
-    if (isRequesting) return;
+    const fetchData = async (): Promise<void> => {
+      setIsFetching(true);
 
-    request();
-  }, [data, isRequesting, request]);
+      const skip = randomNumberWithIncrement(RECIPES_COUNT, RECIPES_INCREMENT);
+      const response = await fetch(`https://www.arla.se/webappsfacet/api/recipes?skip=${skip}${RECIPES_TAGS}`);
+      const { recipes } = await response.json();
+
+      const index = randomNumber(recipes.length);
+      const recipe = recipes[index];
+      setData(recipe);
+
+      setIsFetching(false);
+    };
+
+    fetchData();
+  }, []);
 
   return {
     data,
-    isRequesting,
+    isFetching,
   };
 };
 

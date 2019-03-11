@@ -6,10 +6,10 @@ import TodayView from '../../containers/TodayView';
 import useFetchRecipe from './hooks';
 
 const App = memo(() => {
-  const { data, isRequesting } = useFetchRecipe();
+  const { data, isFetching } = useFetchRecipe();
 
   let child: ReactElement | null = null;
-  if (isRequesting) {
+  if (isFetching) {
     child = <Loader />;
   } else if (data) {
     child = <TodayView recipe={data} />;
