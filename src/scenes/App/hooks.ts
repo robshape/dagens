@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 
 import { FetchRecipe } from './type';
-import { randomNumber, randomNumberWithIncrement } from '../../common/number';
+import { randomNumber, randomNumberWithIncrement } from '../../common/util';
 import { Recipe } from '../../common/type';
 
-const RECIPES_COUNT = 282; // Total number of recipes provided by API (2019-03-09).
-const RECIPES_INCREMENT = 20; // API serves recipes in increments of 20.
-const RECIPES_TAGS = '&tags[]=6479&tags[]=6480&tags[]=6495&tags[]=6500&tags[]=7020&tags[]=7023'; // Recipe categories to filter for: 6479=Billig, 6480=Enkel, 6495=Lättlagat, 6500=Snabb, 7020=Lunch, 7023=Middag.
+export const useFetchRecipe = (): FetchRecipe => {
+  const RECIPES_COUNT = 153; // Total number of recipes provided by API (2019-03-12).
+  const RECIPES_INCREMENT = 20; // API serves recipes in increments of 20.
+  const RECIPES_TAGS = '&tags[]=6479&tags[]=6480&tags[]=6495&tags[]=6500&tags[]=7020&tags[]=7023'; // Recipe categories to filter for: 6479=Billig, 6480=Enkel, 6495=Lättlagat, 6500=Snabb, 7020=Lunch, 7023=Middag.
 
-const useFetchRecipe = (): FetchRecipe => {
   const [data, setData] = useState<Recipe>();
   const [isFetching, setIsFetching] = useState(false);
 
@@ -35,5 +35,3 @@ const useFetchRecipe = (): FetchRecipe => {
     isFetching,
   };
 };
-
-export default useFetchRecipe;

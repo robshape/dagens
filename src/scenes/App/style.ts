@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
 
 export const StyledApp = styled.div`
   align-items: center;
+  background-color: #fdfdfd;
   display: flex;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 16px;
