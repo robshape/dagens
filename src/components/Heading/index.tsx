@@ -3,7 +3,7 @@ import React, { memo } from 'react';
 import { HeadingProps } from './type';
 import { StyledHeading } from './style';
 
-const Heading = memo((props: HeadingProps) => {
+export const Heading = memo((props: HeadingProps) => {
   const { children } = props;
 
   return (
@@ -12,5 +12,3 @@ const Heading = memo((props: HeadingProps) => {
     </StyledHeading>
   );
 });
-
-export default Heading;

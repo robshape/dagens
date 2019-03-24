@@ -1,11 +1,11 @@
 import React, { memo } from 'react';
 
-import Card from '../../components/Card';
-import Heading from '../../components/Heading';
+import { Card } from '../../components/Card';
+import { Heading } from '../../components/Heading';
 import { today } from '../../common/util';
 import { TodayViewProps } from './type';
 
-const TodayView = memo((props: TodayViewProps) => {
+export const TodayView = memo((props: TodayViewProps) => {
   const { recipe } = props;
 
   const dayOfTheWeek = today();
@@ -20,5 +20,3 @@ const TodayView = memo((props: TodayViewProps) => {
     </div>
   );
 });
-
-export default TodayView;

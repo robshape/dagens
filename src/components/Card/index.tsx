@@ -1,10 +1,10 @@
 import React, { memo } from 'react';
 
 import { CardProps } from './type';
-import Image from '../Image';
+import { Image } from '../Image';
 import { StyledCard } from './style';
 
-const Card = memo((props: CardProps) => {
+export const Card = memo((props: CardProps) => {
   const { recipe } = props;
 
   return (
@@ -13,5 +13,3 @@ const Card = memo((props: CardProps) => {
     </StyledCard>
   );
 });
-
-export default Card;

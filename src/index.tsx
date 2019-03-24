@@ -2,7 +2,7 @@ import '@babel/polyfill';
 import React from 'react';
 import { render } from 'react-dom';
 
-import App from './scenes/App';
+import { App } from './scenes/App';
 
 const node = document.getElementById('index');
 render(<App />, node);
