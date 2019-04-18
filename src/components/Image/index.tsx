@@ -1,9 +1,9 @@
-import React, { memo } from 'react';
+import React, { memo, ReactElement } from 'react';
 
 import { ImageProps } from './type';
 import { StyledImage } from './style';
 
-export const Image = memo((props: ImageProps) => {
+export const Image = memo((props: ImageProps): ReactElement => {
   const {
     alt,
     height,

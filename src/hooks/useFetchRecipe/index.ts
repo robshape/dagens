@@ -12,7 +12,7 @@ export const useFetchRecipe = (): FetchRecipe => {
   const [data, setData] = useState<Recipe>();
   const [isFetching, setIsFetching] = useState(false);
 
-  useEffect(() => {
+  useEffect((): void => {
     const fetchData = async (): Promise<void> => {
       setIsFetching(true);
 

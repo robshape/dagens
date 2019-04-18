@@ -1,9 +1,9 @@
-import React, { memo } from 'react';
+import React, { memo, ReactElement } from 'react';
 
 import { SubheadingProps } from './type';
 import { StyledSubheading } from './style';
 
-export const Subheading = memo((props: SubheadingProps) => {
+export const Subheading = memo((props: SubheadingProps): ReactElement => {
   const { children } = props;
 
   return (

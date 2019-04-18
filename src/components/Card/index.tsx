@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, ReactElement } from 'react';
 
 import { CardProps } from './type';
 import { Header } from '../Header';
@@ -8,7 +8,7 @@ import { Separator } from '../Separator';
 import { StyledCard, StyledCardContent } from './style';
 import { Subheading } from '../Subheading';
 
-export const Card = memo((props: CardProps) => {
+export const Card = memo((props: CardProps): ReactElement => {
   const { recipe, title } = props;
 
   return (

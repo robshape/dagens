@@ -1,5 +1,5 @@
-import React, { memo } from 'react';
+import React, { memo, ReactElement } from 'react';
 
 import { StyledLoader } from './style';
 
-export const Loader = memo(() => <StyledLoader />);
+export const Loader = memo((): ReactElement => <StyledLoader />);
