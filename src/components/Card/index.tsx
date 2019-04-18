@@ -1,15 +1,33 @@
 import React, { memo } from 'react';
 
 import { CardProps } from './type';
+import { Header } from '../Header';
+import { Heading } from '../Heading';
 import { Image } from '../Image';
-import { StyledCard } from './style';
+import { Separator } from '../Separator';
+import { StyledCard, StyledCardContent } from './style';
+import { Subheading } from '../Subheading';
 
 export const Card = memo((props: CardProps) => {
-  const { recipe } = props;
+  const { recipe, title } = props;
 
   return (
     <StyledCard>
-      <Image alt={recipe.Name} height={450} src={recipe.ImageUrl} width={600} />
+      <Header>
+        <Heading>
+          {title}
+        </Heading>
+      </Header>
+
+      <StyledCardContent>
+        <Image alt={recipe.Name} height={450} src={recipe.ImageUrl} width={600} />
+
+        <Separator />
+
+        <Subheading>
+          {recipe.Name}
+        </Subheading>
+      </StyledCardContent>
     </StyledCard>
   );
 });

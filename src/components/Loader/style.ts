@@ -12,9 +12,9 @@ export const KeyframesSpin = keyframes`
 
 export const StyledLoader = styled.div`
   animation: ${KeyframesSpin} 500ms linear infinite;
-  border: 12px solid #fff;
+  border: 12px solid #f6f7f8;
   border-radius: 50%;
-  border-top-color: #09091e;
+  border-top-color: #000;
   height: 32px;
   width: 32px;
 `;
