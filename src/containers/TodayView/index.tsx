@@ -8,6 +8,7 @@ export const TodayView = memo((props: TodayViewProps): ReactElement => {
   const { recipe } = props;
 
   const dayOfTheWeek = today();
+
   return (
     <a href={recipe.Url}>
       <Card recipe={recipe} title={dayOfTheWeek} />
