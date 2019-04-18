@@ -8,5 +8,9 @@ export const TodayView = memo((props: TodayViewProps) => {
   const { recipe } = props;
 
   const dayOfTheWeek = today();
-  return <Card recipe={recipe} title={dayOfTheWeek} />;
+  return (
+    <a href={recipe.Url}>
+      <Card recipe={recipe} title={dayOfTheWeek} />
+    </a>
+  );
 });

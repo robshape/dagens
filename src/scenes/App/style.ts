@@ -6,6 +6,11 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
 `;
 
 export const StyledApp = styled.div`
