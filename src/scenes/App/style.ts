@@ -11,6 +11,12 @@ export const GlobalStyle = createGlobalStyle`
     color: inherit;
     text-decoration: inherit;
   }
+
+  body,
+  html,
+  #index {
+    height: 100%;
+  }
 `;
 
 export const StyledApp = styled.div`
@@ -19,7 +25,7 @@ export const StyledApp = styled.div`
   display: flex;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 16px;
+  height: 100%;
   justify-content: center;
-  min-height: 100vh;
   padding: 16px;
 `;
