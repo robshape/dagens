@@ -18,49 +18,48 @@ import { Subheading } from '../Subheading';
 export const Card = memo((props: CardProps): ReactElement => {
   const { recipe, title } = props;
 
-  const averageRating = recipe.RatingAverage
-    ? recipe.RatingAverage.toFixed(1)
-    : 0.0;
-  const preparationTime = recipe.PreparationTotalTime
-    || '15 min';
+  const averageRating = recipe.RatingAverage.toFixed(1);
+  const preparationTime = recipe.PreparationTotalTime || '15 min';
 
   return (
-    <StyledCard>
-      <Header>
-        <Heading>
-          {title}
-        </Heading>
-      </Header>
+    <a href={recipe.Url}>
+      <StyledCard>
+        <Header>
+          <Heading>
+            {title}
+          </Heading>
+        </Header>
 
-      <StyledCardBody>
-        <Image alt={recipe.Name} height={450} src={recipe.ImageUrl} width={600} />
+        <StyledCardBody>
+          <Image alt={recipe.Name} height={450} src={recipe.ImageUrl} width={600} />
 
-        <Separator />
+          <Separator />
 
-        <Subheading>
-          {recipe.Name}
-        </Subheading>
+          <Subheading>
+            {recipe.Name}
+          </Subheading>
 
-        <Separator withBorder />
+          <Separator withBorder />
 
-        <StyledCardFooter>
-          <StyledCardDetails>
-            <FontAwesomeIcon icon={['far', 'clock']} />
+          <StyledCardFooter>
+            <StyledCardDetails>
+              <FontAwesomeIcon icon={['far', 'clock']} />
 
-            <StyledCardText>
-              {preparationTime}
-            </StyledCardText>
-          </StyledCardDetails>
+              <StyledCardText>
+                {preparationTime}
+              </StyledCardText>
+            </StyledCardDetails>
 
-          <StyledCardDetails>
-            <FontAwesomeIcon icon={['far', 'star']} />
+            <StyledCardDetails>
+              <FontAwesomeIcon icon={['far', 'star']} />
 
-            <StyledCardText>
-              {averageRating}
-            </StyledCardText>
-          </StyledCardDetails>
-        </StyledCardFooter>
-      </StyledCardBody>
-    </StyledCard>
+              <StyledCardText>
+                {averageRating}
+              </StyledCardText>
+            </StyledCardDetails>
+          </StyledCardFooter>
+        </StyledCardBody>
+      </StyledCard>
+    </a>
   );
 });
