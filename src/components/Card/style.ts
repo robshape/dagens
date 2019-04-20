@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const StyledCard = styled.div`
   background-color: #fff;
   border-radius: 2px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
   max-width: 382px;
 `;
 
