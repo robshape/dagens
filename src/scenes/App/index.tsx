@@ -1,4 +1,4 @@
-import React, { Fragment, memo, ReactElement } from 'react';
+import React, { memo, ReactElement } from 'react';
 
 import { GlobalStyle, StyledApp } from './style';
 import { Loader } from '../../components/Loader';
@@ -16,12 +16,12 @@ export const App = memo((): ReactElement => {
   }
 
   return (
-    <Fragment>
+    <>
       <GlobalStyle />
 
       <StyledApp>
         {child}
       </StyledApp>
-    </Fragment>
+    </>
   );
 });
