@@ -1,9 +1,9 @@
-import React, { memo, ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 
 import { SubheadingProps } from './type';
 import { StyledSubheading } from './style';
 
-export const Subheading = memo((props: SubheadingProps): ReactElement => {
+export const Subheading = (props: SubheadingProps): ReactElement => {
   const { children } = props;
 
   return (
@@ -11,4 +11,4 @@ export const Subheading = memo((props: SubheadingProps): ReactElement => {
       {children}
     </StyledSubheading>
   );
-});
+};

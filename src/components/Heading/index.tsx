@@ -1,9 +1,9 @@
-import React, { memo, ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 
 import { HeadingProps } from './type';
 import { StyledHeading } from './style';
 
-export const Heading = memo((props: HeadingProps): ReactElement => {
+export const Heading = (props: HeadingProps): ReactElement => {
   const { children } = props;
 
   return (
@@ -11,4 +11,4 @@ export const Heading = memo((props: HeadingProps): ReactElement => {
       {children}
     </StyledHeading>
   );
-});
+};

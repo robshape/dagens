@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { memo, ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 
 import { CardProps } from './type';
 import { Header } from '../Header';
@@ -15,7 +15,7 @@ import {
 } from './style';
 import { Subheading } from '../Subheading';
 
-export const Card = memo((props: CardProps): ReactElement => {
+export const Card = (props: CardProps): ReactElement => {
   const { recipe, title } = props;
 
   const averageRating = recipe.RatingAverage.toFixed(1);
@@ -62,4 +62,4 @@ export const Card = memo((props: CardProps): ReactElement => {
       </StyledCard>
     </a>
   );
-});
+};

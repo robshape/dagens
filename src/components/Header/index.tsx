@@ -1,9 +1,9 @@
-import React, { memo, ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 
 import { HeaderProps } from './type';
 import { StyledHeader } from './style';
 
-export const Header = memo((props: HeaderProps): ReactElement => {
+export const Header = (props: HeaderProps): ReactElement => {
   const { children } = props;
 
   return (
@@ -11,4 +11,4 @@ export const Header = memo((props: HeaderProps): ReactElement => {
       {children}
     </StyledHeader>
   );
-});
+};
