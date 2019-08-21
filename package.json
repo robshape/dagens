@@ -51,6 +51,7 @@
   "private": true,
   "scripts": {
     "build": "webpack --config webpack.config.prod.ts --progress",
+    "deploy": "./deploy.sh",
     "lint": "npm run lint:css && npm run lint:ts && npm run lint:type",
     "lint:css": "stylelint './src/**/*.ts'",
     "lint:ts": "eslint --ext .js,.ts,.tsx ./",
