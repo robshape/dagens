@@ -6,7 +6,5 @@ import { StyledSeparator } from './style';
 export const Separator = (props: SeparatorProps): ReactElement => {
   const { withBorder } = props;
 
-  return (
-    <StyledSeparator withBorder={withBorder} />
-  );
+  return <StyledSeparator withBorder={withBorder} />;
 };

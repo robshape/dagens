@@ -7,7 +7,7 @@ export const Subheading = (props: SubheadingProps): ReactElement => {
   const { children } = props;
 
   return (
-    <StyledSubheading title={children}>
+    <StyledSubheading>
       {children}
     </StyledSubheading>
   );
