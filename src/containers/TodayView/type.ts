@@ -1,4 +1,4 @@
-import { Recipe } from '../../common/type';
+import { Recipe } from '../../types/Recipe';
 
 export interface TodayViewProps {
   recipe: Recipe;
