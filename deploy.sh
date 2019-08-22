@@ -1,15 +1,12 @@
 #!/bin/bash
 set -euo pipefail
 
-echo "[*] CLEANING ./docs/"
-rm -fr ./docs/
-echo
-
 echo "[*] LINTING CODE"
 npm run lint
 echo
 
 echo "[*] BULDING PROJECT"
+rm -fr ./docs/
 npm run build
 mv dist/ docs
 echo
