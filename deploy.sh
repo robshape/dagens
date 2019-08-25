@@ -6,8 +6,8 @@ npm run lint
 echo
 
 echo "[*] BULDING PROJECT"
-rm -fr ./docs/
 npm run build
+rm -fr ./docs/
 mv dist/ docs
 echo
 
