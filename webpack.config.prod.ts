@@ -23,9 +23,7 @@ const config: webpack.Configuration = {
 
   optimization: {
     minimizer: [
-      new TerserPlugin({
-        parallel: true,
-      }),
+      new TerserPlugin(),
     ],
     splitChunks: {
       cacheGroups: {
