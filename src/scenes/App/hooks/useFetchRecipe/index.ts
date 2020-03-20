@@ -14,7 +14,8 @@ export const useFetchRecipe = (): FetchRecipe => {
       setIsFetching(true);
 
       const skip = randomNumberWithIncrement(RECIPES_COUNT, RECIPES_INCREMENT);
-      const response = await fetch(`https://www.arla.se/webappsfacet/api/recipes?skip=${skip}${RECIPES_TAGS}`);
+      // CORS Anywhere enables cross-origin requests to anywhere.
+      const response = await fetch(`https://cors-anywhere.herokuapp.com/https://www.arla.se/webappsfacet/api/recipes?skip=${skip}${RECIPES_TAGS}`);
       const { recipes } = await response.json();
 
       const index = randomNumber(recipes.length);
