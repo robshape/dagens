@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-import { SeparatorProps } from './type';
+import { Props } from './type';
 
 export const StyledSeparator = styled.div`
   margin: 12px 0;
-  ${(props: SeparatorProps) => !!props.withBorder && `
+  ${(props: Props) => !!props.withBorder && `
     border-bottom: 1px solid #eaebec;
     margin: 12px 0 20px 0;
   `}

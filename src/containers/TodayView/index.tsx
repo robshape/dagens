@@ -1,12 +1,14 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 
 import { Card } from '../../components/Card';
+import { Recipe } from '../../types';
 import { today } from './util';
-import { TodayViewProps } from './type';
 
-export const TodayView = (props: TodayViewProps): ReactElement => {
-  const { recipe } = props;
+type Props = {
+  recipe: Recipe;
+};
 
+export const TodayView = ({ recipe }: Props): JSX.Element => {
   const dayOfTheWeek = today();
 
   return <Card recipe={recipe} title={dayOfTheWeek} />;

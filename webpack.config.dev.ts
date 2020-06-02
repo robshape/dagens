@@ -7,6 +7,8 @@ const config: webpack.Configuration = {
     hot: true,
   },
 
+  devtool: 'cheap-module-eval-source-map',
+
   mode: 'development',
 
   module: {
@@ -18,6 +20,7 @@ const config: webpack.Configuration = {
           {
             loader: 'babel-loader',
             options: {
+              cacheCompression: false,
               cacheDirectory: true,
             },
           },
@@ -27,7 +30,6 @@ const config: webpack.Configuration = {
   },
 
   optimization: {
-    removeAvailableModules: false,
     removeEmptyChunks: false,
     splitChunks: false,
   },
@@ -38,6 +40,7 @@ const config: webpack.Configuration = {
 
   plugins: [
     new HtmlWebpackPlugin({
+      scriptLoading: 'defer',
       template: './src/index.html',
     }),
     new webpack.HotModuleReplacementPlugin(),
@@ -48,9 +51,6 @@ const config: webpack.Configuration = {
       '.js',
       '.ts',
       '.tsx',
-    ],
-    modules: [
-      path.resolve(__dirname, './node_modules/'),
     ],
   },
 };

@@ -1,10 +1,8 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 
-import { SeparatorProps } from './type';
+import { Props } from './type';
 import { StyledSeparator } from './style';
 
-export const Separator = (props: SeparatorProps): ReactElement => {
-  const { withBorder } = props;
-
-  return <StyledSeparator withBorder={withBorder} />;
-};
+export const Separator = ({ withBorder = false }: Props): JSX.Element => (
+  <StyledSeparator withBorder={withBorder} />
+);

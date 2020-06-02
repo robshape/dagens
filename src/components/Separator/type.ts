@@ -1,3 +1,3 @@
-export interface SeparatorProps {
+export type Props = {
   withBorder?: boolean;
-}
+};

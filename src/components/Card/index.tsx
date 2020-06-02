@@ -1,11 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { ReactElement } from 'react';
+import React from 'react';
 
-import { CardProps } from './type';
 import { Header } from '../Header';
-import { Heading } from '../Heading';
 import { Image } from '../Image';
 import { Separator } from '../Separator';
+import { Recipe } from '../../types';
 import {
   StyledCard,
   StyledCardBody,
@@ -13,21 +12,26 @@ import {
   StyledCardFooter,
   StyledCardText,
 } from './style';
-import { Subheading } from '../Subheading';
 
-export const Card = (props: CardProps): ReactElement => {
-  const { recipe, title } = props;
+type Props = {
+  recipe: Recipe;
+  title: string;
+};
 
-  const averageRating = recipe.RatingAverage.toFixed(1);
-  const preparationTime = recipe.PreparationTotalTime || '15 min';
+export const Card = ({ recipe, title }: Props): JSX.Element => {
+  const averageRating = recipe
+    .RatingAverage
+    .toFixed(1);
+  const preparationTime = recipe.PreparationTotalTime
+    || '~15 min';
 
   return (
     <a href={recipe.Url}>
       <StyledCard>
         <Header>
-          <Heading>
+          <h2>
             {title}
-          </Heading>
+          </h2>
         </Header>
 
         <StyledCardBody>
@@ -35,9 +39,9 @@ export const Card = (props: CardProps): ReactElement => {
 
           <Separator />
 
-          <Subheading>
+          <h3>
             {recipe.Name}
-          </Subheading>
+          </h3>
 
           <Separator withBorder />
 

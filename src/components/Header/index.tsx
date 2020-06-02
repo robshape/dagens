@@ -1,14 +1,13 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 
-import { HeaderProps } from './type';
 import { StyledHeader } from './style';
 
-export const Header = (props: HeaderProps): ReactElement => {
-  const { children } = props;
-
-  return (
-    <StyledHeader>
-      {children}
-    </StyledHeader>
-  );
+type Props = {
+  children: React.ReactNode;
 };
+
+export const Header = ({ children }: Props): JSX.Element => (
+  <StyledHeader>
+    {children}
+  </StyledHeader>
+);

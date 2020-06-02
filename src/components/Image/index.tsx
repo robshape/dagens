@@ -1,15 +1,17 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 
-import { ImageProps } from './type';
 import { StyledImage } from './style';
 
-export const Image = (props: ImageProps): ReactElement => {
-  const {
-    alt,
-    height,
-    src,
-    width,
-  } = props;
-
-  return <StyledImage alt={alt} height={height} src={src} width={width} />;
+type Props = {
+  alt: string;
+  height: number;
+  src: string;
+  width: number;
 };
+
+export const Image = ({
+  alt,
+  height,
+  src,
+  width,
+}: Props): JSX.Element => <StyledImage alt={alt} height={height} src={src} width={width} />;

@@ -12,6 +12,21 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: inherit;
   }
 
+  h2 {
+    font-size: 2rem;
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   body,
   html,
   #index {

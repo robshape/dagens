@@ -1,5 +1,5 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 
 import { StyledLoader } from './style';
 
-export const Loader = (): ReactElement => <StyledLoader />;
+export const Loader = (): JSX.Element => <StyledLoader />;

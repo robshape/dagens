@@ -4,6 +4,8 @@ import path from 'path';
 import TerserPlugin from 'terser-webpack-plugin';
 import webpack from 'webpack';
 
+import { dependencies } from './package.json';
+
 const config: webpack.Configuration = {
   mode: 'production',
 
@@ -23,25 +25,37 @@ const config: webpack.Configuration = {
 
   optimization: {
     minimizer: [
-      new TerserPlugin(),
+      new TerserPlugin({
+        cache: false,
+      }),
     ],
+    moduleIds: 'hashed',
+    runtimeChunk: 'single',
     splitChunks: {
-      cacheGroups: {
-        libs: {
-          chunks: 'all',
-          name: 'libs',
-          test: /node_modules/,
-        },
-      },
+      cacheGroups: Object
+        .keys(dependencies)
+        .map((dependency) => ({
+          [`vendors-${dependency.replace('@', '').replace('/', '-')}`]: {
+            test: new RegExp(`/node_modules/${dependency}/`),
+          },
+        }))
+        .reduce((acc, cur) => ({
+          ...acc,
+          ...cur,
+        })),
+      chunks: 'all',
+      maxInitialRequests: Infinity,
     },
   },
 
   output: {
-    filename: '[name].js?[chunkhash]',
+    filename: '[name].[contenthash].js',
   },
 
   plugins: [
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+      verbose: true,
+    }),
     new HtmlWebpackPlugin({
       cache: false,
       minify: {
@@ -62,6 +76,7 @@ const config: webpack.Configuration = {
         sortClassName: true,
         useShortDoctype: true,
       },
+      scriptLoading: 'defer',
       template: './src/index.html',
     }),
   ],
