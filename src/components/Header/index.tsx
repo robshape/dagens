@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyledHeader } from './style';
+import { StyledHeader } from './styles';
 
 type Props = {
   children: React.ReactNode;

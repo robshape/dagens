@@ -11,7 +11,7 @@ import {
   StyledCardDetails,
   StyledCardFooter,
   StyledCardText,
-} from './style';
+} from './styles';
 
 type Props = {
   recipe: Recipe;

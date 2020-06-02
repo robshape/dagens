@@ -1,5 +1,5 @@
 import React from 'react';
 
-import { StyledLoader } from './style';
+import { StyledLoader } from './styles';
 
 export const Loader = (): JSX.Element => <StyledLoader />;

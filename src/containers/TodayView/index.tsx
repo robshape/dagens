@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Card } from '../../components/Card';
 import { Recipe } from '../../types';
-import { today } from './util';
+import { today } from './utils';
 
 type Props = {
   recipe: Recipe;

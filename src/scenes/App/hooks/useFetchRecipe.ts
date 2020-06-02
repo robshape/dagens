@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
-import { randomNumber, randomNumberWithIncrement } from './util';
-import { Recipe } from '../../../../types';
+import { randomNumber, randomNumberWithIncrement } from './utils';
+import { Recipe } from '../../../types';
 
 const COUNT = 149; // Total number of recipes provided by API (2019-08-21).
 const INCREMENT = 20; // API serves recipes in increments of 20.

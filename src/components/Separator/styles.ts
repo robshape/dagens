@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Props } from './type';
+import { Props } from './types';
 
 export const StyledSeparator = styled.div`
   margin: 12px 0;

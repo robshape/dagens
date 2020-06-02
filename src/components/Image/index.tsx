@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyledImage } from './style';
+import { StyledImage } from './styles';
 
 type Props = {
   alt: string;
