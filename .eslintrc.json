@@ -13,7 +13,6 @@
     "project": "./tsconfig.json"
   },
   "rules": {
-    "@typescript-eslint/camelcase": "off",
     "import/no-extraneous-dependencies": ["error", {
       "devDependencies": [
         "webpack.config.dev.ts",
