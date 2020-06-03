@@ -4,6 +4,7 @@ const config = {
       pure: true,
       ssr: false,
     }],
+    'react-hot-loader/babel',
   ],
   presets: [
     ['@babel/preset-env', {

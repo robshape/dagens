@@ -1,9 +1,10 @@
 import './polyfills';
 
+import 'react-hot-loader';
 import React from 'react';
 import { render } from 'react-dom';
 
-import { App } from './scenes/App';
+import { App } from './app';
 
 const node = document.getElementById('index');
 render(<App />, node);
