@@ -1,6 +1,7 @@
 const config = {
   plugins: [
     ['babel-plugin-styled-components', {
+      displayName: false,
       pure: true,
       ssr: false,
     }],

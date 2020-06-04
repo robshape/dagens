@@ -1,4 +1,5 @@
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import CompressionPlugin from 'compression-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 import TerserPlugin from 'terser-webpack-plugin';
@@ -55,6 +56,9 @@ const config: webpack.Configuration = {
   plugins: [
     new CleanWebpackPlugin({
       verbose: true,
+    }),
+    new CompressionPlugin({
+      cache: false,
     }),
     new HtmlWebpackPlugin({
       cache: false,
