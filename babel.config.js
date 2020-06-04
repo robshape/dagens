@@ -1,4 +1,4 @@
-const config = {
+module.exports = {
   plugins: [
     ['babel-plugin-styled-components', {
       displayName: false,
@@ -16,5 +16,3 @@ const config = {
     '@babel/preset-typescript',
   ],
 };
-
-module.exports = config;

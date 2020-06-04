@@ -50,8 +50,8 @@
   "scripts": {
     "build": "NODE_ENV=production webpack --config webpack.config.prod.ts --progress",
     "deploy": "./deploy.sh",
-    "lint": "npm run lint:css && npm run lint:ts && npm run lint:type",
-    "lint:css": "stylelint './src/**/*.ts'",
+    "lint": "npm run lint:css -- --cache && npm run lint:ts -- --cache && npm run lint:type",
+    "lint:css": "stylelint --report-needless-disables './src/**/*.ts'",
     "lint:ts": "eslint --ext .js,.ts,.tsx ./",
     "lint:type": "tsc",
     "start": "webpack-dev-server --config webpack.config.dev.ts --progress"

@@ -3,11 +3,10 @@ import CompressionPlugin from 'compression-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 import TerserPlugin from 'terser-webpack-plugin';
-import webpack from 'webpack';
 
 import { dependencies } from './package.json';
 
-const config: webpack.Configuration = {
+export default {
   mode: 'production',
 
   module: {
@@ -93,5 +92,3 @@ const config: webpack.Configuration = {
     ],
   },
 };
-
-export default config;
