@@ -1,5 +1,6 @@
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import CompressionPlugin from 'compression-webpack-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 import TerserPlugin from 'terser-webpack-plugin';
@@ -58,6 +59,11 @@ export default {
     }),
     new CompressionPlugin({
       cache: false,
+    }),
+    new CopyPlugin({
+      patterns: [
+        './src/assets/',
+      ],
     }),
     new HtmlWebpackPlugin({
       cache: false,
