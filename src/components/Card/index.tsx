@@ -3,7 +3,6 @@ import React from 'react';
 
 import { Header } from '../Header';
 import { Image } from '../Image';
-import { Separator } from '../Separator';
 import { Recipe } from '../../types';
 import {
   StyledCard,
@@ -37,13 +36,9 @@ export const Card = ({ recipe, title }: Props): JSX.Element => {
         <StyledCardBody>
           <Image alt={recipe.Name} height={450} src={recipe.ImageUrl} width={600} />
 
-          <Separator />
-
-          <h3>
+          <h3 title={recipe.Name}>
             {recipe.Name}
           </h3>
-
-          <Separator withBorder />
 
           <StyledCardFooter>
             <StyledCardDetails>

@@ -4,5 +4,5 @@ export const StyledHeader = styled.div`
   border-bottom: 1px solid #eaebec;
   display: flex;
   justify-content: center;
-  padding: 16px;
+  padding: 1rem;
 `;
