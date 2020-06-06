@@ -32,6 +32,11 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 16px;
     line-height: 24px;
   }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 `;
 
 export const StyledApp = styled.div`

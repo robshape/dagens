@@ -15,6 +15,7 @@ export const StyledCardDetails = styled.p`
   align-items: center;
   color: #93a2ac;
   display: flex;
+  font-weight: 100;
 `;
 
 export const StyledCardFooter = styled.div`
@@ -26,7 +27,6 @@ export const StyledCardFooter = styled.div`
 
 export const StyledCardText = styled.span`
   font-size: 0.75rem;
-  font-weight: 100;
   line-height: 1.125rem;
   margin-left: 0.5rem;
 `;
