@@ -22,6 +22,7 @@ export const StyledCardFooter = styled.div`
   border-top: 1px solid #eaebec;
   display: flex;
   justify-content: space-between;
+  margin-top: 0.5rem;
   padding-top: 1rem;
 `;
 

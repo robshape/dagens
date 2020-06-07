@@ -20,7 +20,7 @@ export const GlobalStyle = createGlobalStyle`
 
   h3 {
     font-size: 1.625rem;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 3rem;
     overflow: hidden;
     text-overflow: ellipsis;
