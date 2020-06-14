@@ -39,7 +39,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export const StyledApp = styled.div`
+export const StyledAppScene = styled.div`
   align-items: center;
   background-color: #f6f7f8;
   display: flex;

@@ -8,6 +8,7 @@
     "react-dom": "16.13.1",
     "react-hot-loader": "4.12.21",
     "regenerator-runtime": "0.13.5",
+    "runtypes": "4.2.0",
     "styled-components": "5.1.1"
   },
   "devDependencies": {
@@ -43,7 +44,7 @@
     "stylelint-config-standard": "20.0.0",
     "stylelint-config-styled-components": "0.1.1",
     "stylelint-processor-styled-components": "1.10.0",
-    "terser-webpack-plugin": "3.0.3",
+    "terser-webpack-plugin": "3.0.4",
     "ts-node": "8.10.2",
     "typescript": "3.9.5",
     "webpack": "4.43.0",
@@ -53,13 +54,13 @@
   "private": true,
   "scripts": {
     "analyze": "lighthouse --output-path=./lighthouse.report.html --view https://dagens.shapeless.xyz/",
-    "build": "NODE_ENV=production webpack --config webpack.config.prod.ts --progress",
+    "build": "NODE_ENV=production webpack --config ./webpack.config.prod.ts --progress",
     "deploy": "./deploy.sh",
     "lint": "npm run lint:md && npm run lint:css -- --cache && npm run lint:ts -- --cache && npm run lint:type",
     "lint:css": "stylelint --report-needless-disables './src/**/*.ts'",
     "lint:md": "markdownlint --config ./.markdownlint.js '**/*.md'",
     "lint:ts": "eslint --ext .js,.ts,.tsx ./",
     "lint:type": "tsc",
-    "start": "webpack-dev-server --config webpack.config.dev.ts --progress"
+    "start": "webpack-dev-server --config ./webpack.config.dev.ts --progress"
   }
 }
