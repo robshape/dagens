@@ -22,9 +22,7 @@ export const AppScene = (): JSX.Element => {
     <>
       <GlobalStyle />
 
-      <StyledAppScene>
-        {child}
-      </StyledAppScene>
+      <StyledAppScene>{child}</StyledAppScene>
     </>
   );
 };

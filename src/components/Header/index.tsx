@@ -6,8 +6,4 @@ type Props = {
   children: React.ReactNode;
 };
 
-export const Header = ({ children }: Props): JSX.Element => (
-  <StyledHeader>
-    {children}
-  </StyledHeader>
-);
+export const Header = ({ children }: Props): JSX.Element => <StyledHeader>{children}</StyledHeader>;

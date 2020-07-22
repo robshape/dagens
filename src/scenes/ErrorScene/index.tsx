@@ -18,12 +18,8 @@ export const ErrorScene = ({ message }: Props): JSX.Element => (
       <FontAwesomeIcon icon={['far', 'sad-tear']} />
     </StyledErrorSceneIcon>
 
-    <StyledErrorSceneText>
-      Något blev fel. Kan du prova att ladda om sidan?
-    </StyledErrorSceneText>
+    <StyledErrorSceneText>Något blev fel. Kan du prova att ladda om sidan?</StyledErrorSceneText>
 
-    <StyledErrorSceneMessage>
-      {`(${message})`}
-    </StyledErrorSceneMessage>
+    <StyledErrorSceneMessage>{`(${message})`}</StyledErrorSceneMessage>
   </StyledErrorScene>
 );

@@ -9,9 +9,6 @@ type Props = {
   width: number;
 };
 
-export const Image = ({
-  alt,
-  height,
-  src,
-  width,
-}: Props): JSX.Element => <StyledImage alt={alt} height={height} src={src} width={width} />;
+export const Image = ({ alt, height, src, width }: Props): JSX.Element => (
+  <StyledImage alt={alt} height={height} src={src} width={width} />
+);
