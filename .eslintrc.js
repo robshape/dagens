@@ -9,6 +9,10 @@ module.exports = {
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    // Prettier is last because it overrides previous configs!
+    'prettier',
+    'prettier/@typescript-eslint',
+    'prettier/react',
   ],
 
   ignorePatterns: [
