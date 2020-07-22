@@ -57,9 +57,10 @@
     "analyze": "lighthouse --output-path=./lighthouse.report.html --view https://dagens.shapeless.xyz/",
     "build": "NODE_ENV=production webpack --config ./webpack.config.prod.ts --progress",
     "deploy": "./deploy.sh",
-    "lint": "npm run lint:md && npm run lint:css -- --cache && npm run lint:ts -- --cache && npm run lint:type",
+    "lint": "npm run lint:md && npm run lint:css -- --cache && npm run lint:ts -- --cache && npm run lint:type && npm run lint:pretty",
     "lint:css": "stylelint --report-needless-disables './src/**/*.ts'",
     "lint:md": "markdownlint --config ./.markdownlint.js '**/*.md'",
+    "lint:pretty": "prettier --check ./",
     "lint:ts": "eslint --ext .js,.ts,.tsx ./",
     "lint:type": "tsc",
     "start": "webpack-dev-server --config ./webpack.config.dev.ts --progress"
