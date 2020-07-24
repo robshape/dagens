@@ -6,7 +6,5 @@ module.exports = {
     'stylelint-config-prettier',
   ],
 
-  processors: [
-    'stylelint-processor-styled-components',
-  ],
+  processors: ['stylelint-processor-styled-components'],
 };

@@ -10,6 +10,5 @@ type Props = {
 
 export const TodayView = ({ recipe }: Props): JSX.Element => {
   const dayOfTheWeek = today();
-
   return <Card recipe={recipe} title={dayOfTheWeek} />;
 };

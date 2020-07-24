@@ -21,7 +21,6 @@ export const AppScene = (): JSX.Element => {
   return (
     <>
       <GlobalStyle />
-
       <StyledAppScene>{child}</StyledAppScene>
     </>
   );

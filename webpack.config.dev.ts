@@ -50,10 +50,6 @@ export default {
     alias: {
       'react-dom': '@hot-loader/react-dom',
     },
-    extensions: [
-      '.js',
-      '.ts',
-      '.tsx',
-    ],
+    extensions: ['.js', '.ts', '.tsx'],
   },
 };

@@ -8,10 +8,5 @@
     "skipLibCheck": true,
     "strict": true
   },
-  "include": [
-    "**/*.js",
-    "**/.*.js",
-    "**/*.ts",
-    "**/*.tsx"
-  ]
+  "include": ["**/*.js", "**/.*.js", "**/*.ts", "**/*.tsx"]
 }

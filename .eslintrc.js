@@ -15,21 +15,19 @@ module.exports = {
     'prettier/react',
   ],
 
-  ignorePatterns: [
-    '!**/.*.js',
-  ],
+  ignorePatterns: ['!**/.*.js'],
 
   parserOptions: {
     project: './tsconfig.json',
   },
 
   rules: {
-    'import/no-extraneous-dependencies': ['error', {
-      devDependencies: [
-        'webpack.config.dev.ts',
-        'webpack.config.prod.ts',
-      ],
-    }],
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: ['webpack.config.dev.ts', 'webpack.config.prod.ts'],
+      },
+    ],
     'import/prefer-default-export': 'off',
     'no-void': 'off',
   },

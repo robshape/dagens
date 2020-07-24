@@ -5,7 +5,6 @@ import { useEffect } from 'react';
 export const useConfigureFontAwesome = (): void => {
   useEffect((): (() => void) => {
     library.add(faClock, faSadTear, faStar);
-
     return (): void => {
       library.reset();
     };

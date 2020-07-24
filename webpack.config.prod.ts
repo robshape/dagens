@@ -33,8 +33,7 @@ export default {
     moduleIds: 'hashed',
     runtimeChunk: 'single',
     splitChunks: {
-      cacheGroups: Object
-        .keys(dependencies)
+      cacheGroups: Object.keys(dependencies)
         .map((dependency) => ({
           [`vendors-${dependency.replace('@', '').replace('/', '-')}`]: {
             test: new RegExp(`/node_modules/${dependency}/`),
@@ -61,9 +60,7 @@ export default {
       cache: false,
     }),
     new CopyPlugin({
-      patterns: [
-        './src/assets/',
-      ],
+      patterns: ['./src/assets/'],
     }),
     new HtmlWebpackPlugin({
       cache: false,
@@ -91,10 +88,6 @@ export default {
   ],
 
   resolve: {
-    extensions: [
-      '.js',
-      '.ts',
-      '.tsx',
-    ],
+    extensions: ['.js', '.ts', '.tsx'],
   },
 };

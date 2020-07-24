@@ -36,13 +36,11 @@ export const Card = ({ recipe, title }: Props): JSX.Element => {
           <StyledCardFooter>
             <StyledCardDetails>
               <FontAwesomeIcon icon={['far', 'clock']} />
-
               <StyledCardText>{preparationTime}</StyledCardText>
             </StyledCardDetails>
 
             <StyledCardDetails>
               <FontAwesomeIcon icon={['far', 'star']} />
-
               <StyledCardText>{averageRating}</StyledCardText>
             </StyledCardDetails>
           </StyledCardFooter>
