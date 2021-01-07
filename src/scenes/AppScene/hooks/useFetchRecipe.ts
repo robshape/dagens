@@ -28,9 +28,9 @@ export const useFetchRecipe = (): Returns => {
         const response = await fetch(
           `https://cors-anywhere.herokuapp.com/https://www.arla.se/webappsfacet/api/recipes?skip=${skip}${TAGS}`
         ); // CORS Anywhere enables cross-origin requests to... anywhere!
-        const json = await (response.json() as Promise<{ recipes: Recipes }>);
+        const json = await (response.json() as Promise<{ cards: Recipes }>);
 
-        const recipes = Recipes.check(json.recipes);
+        const recipes = Recipes.check(json.cards);
         const index = randomNumber(recipes.length);
         const recipe = recipes[index];
 
