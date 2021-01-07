@@ -22,6 +22,7 @@ module.exports = {
   },
 
   rules: {
+    '@typescript-eslint/no-redeclare': 'off',
     'import/no-extraneous-dependencies': [
       'error',
       {
