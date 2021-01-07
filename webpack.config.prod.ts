@@ -25,12 +25,7 @@ export default {
   },
 
   optimization: {
-    minimizer: [
-      new TerserPlugin({
-        cache: false,
-      }),
-    ],
-    moduleIds: 'hashed',
+    minimizer: [new TerserPlugin()],
     runtimeChunk: 'single',
     splitChunks: {
       cacheGroups: Object.keys(dependencies)
@@ -50,15 +45,14 @@ export default {
 
   output: {
     filename: '[name].[contenthash].js',
+    path: path.resolve(__dirname, './dist/'), // Required by CleanWebpackPlugin.
   },
 
   plugins: [
     new CleanWebpackPlugin({
       verbose: true,
     }),
-    new CompressionPlugin({
-      cache: false,
-    }),
+    new CompressionPlugin(),
     new CopyPlugin({
       patterns: ['./src/assets/'],
     }),
