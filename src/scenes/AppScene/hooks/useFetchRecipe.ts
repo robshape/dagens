@@ -26,7 +26,7 @@ export const useFetchRecipe = (): Returns => {
       const skip = randomNumberWithIncrement(COUNT, INCREMENT);
       try {
         const response = await fetch(
-          `https://cors-anywhere.herokuapp.com/https://www.arla.se/webappsfacet/api/recipes?skip=${skip}${TAGS}`
+          `https://cors.bridged.cc/https://www.arla.se/webappsfacet/api/recipes?skip=${skip}${TAGS}`
         ); // CORS Anywhere enables cross-origin requests to... anywhere!
         const json = await (response.json() as Promise<{ cards: Recipes }>);
 
