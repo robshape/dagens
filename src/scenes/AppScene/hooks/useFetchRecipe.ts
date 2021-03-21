@@ -27,7 +27,7 @@ export const useFetchRecipe = (): Returns => {
       try {
         const response = await fetch(
           `https://cors.bridged.cc/https://www.arla.se/webappsfacet/api/recipes?skip=${skip}${TAGS}`
-        ); // CORS Anywhere enables cross-origin requests to... anywhere!
+        ); // Use a CORS proxy to enable cross-origin requests to anywhere.
         const json = await (response.json() as Promise<{ cards: Recipes }>);
 
         const recipes = Recipes.check(json.cards);
